@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Tracing;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,12 +11,12 @@ using System.Windows.Forms;
 
 namespace Civ6Planner.Views
 {
-    public partial class NewGameVeiw : Form, INewGameView
+    public partial class NewGameView : Form, INewGameView
     {
         private string _message;
         private bool _isSuccessful;
 
-        public NewGameVeiw()
+        public NewGameView()
         {
             InitializeComponent();
             Events();
@@ -74,6 +75,15 @@ namespace Civ6Planner.Views
             throw new NotImplementedException();
         }
 
-
+        // Mdi instance
+        private static NewGameView instance;
+        public static NewGameView GetInstance(Form parentContainer)
+        {
+            instance = new NewGameView();
+            instance.MdiParent = parentContainer;
+            instance.FormBorderStyle = FormBorderStyle.None;
+            instance.Dock = DockStyle.Fill;
+            return instance;
+        }
     }
 }

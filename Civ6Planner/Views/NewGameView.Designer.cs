@@ -1,6 +1,6 @@
 ﻿namespace Civ6Planner.Views
 {
-    partial class NewGameVeiw
+    partial class NewGameView
     {
         /// <summary>
         /// Required designer variable.

@@ -4,7 +4,7 @@
     <Compile Update="Views\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\NewGameVeiw.cs">
+    <Compile Update="Views\NewGameView.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
