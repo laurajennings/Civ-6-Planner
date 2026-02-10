@@ -4,5 +4,8 @@
     <Compile Update="Views\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\NewGameVeiw.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
