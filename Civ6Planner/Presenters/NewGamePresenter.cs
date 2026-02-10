@@ -12,14 +12,16 @@ namespace Civ6Planner.Presenters
     {
         private INewGameView _view;
         private IGameRepo _repo;
+        private ICivRepo _civRepo;
         private readonly Action<GameModel> _onGameLoaded;
-        //private IEnumerable<CivModel> civList;
+        private IEnumerable<CivModel> civList;
         private BindingSource _civsBindingSource;
 
-        public NewGamePresenter(INewGameView view, IGameRepo repo, Action<GameModel> onGameLoaded)
+        public NewGamePresenter(INewGameView view, IGameRepo repo, ICivRepo civRepo, Action<GameModel> onGameLoaded)
         {
             _view = view;
             _repo = repo;
+            _civRepo = civRepo;
             _onGameLoaded = onGameLoaded;
 
             _view.SaveClicked += OnSaveClicked;
@@ -27,9 +29,9 @@ namespace Civ6Planner.Presenters
             _view.CivSelectionChanged += OnCivSelectionChanged;
 
             _civsBindingSource = new BindingSource();
-            _view.SetCivListBindingSource(_civsBindingSource);
-            _view.SetCivColumns();
+            _view.SetCivBindingSource(_civsBindingSource);
             GetCivList();
+            _view.SetCivColumns();
 
             _view.Show();
         }
@@ -46,12 +48,17 @@ namespace Civ6Planner.Presenters
 
         private void OnCivSelectionChanged(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var selectedCiv = (CivModel)_civsBindingSource.Current;
+            _view.CivName = selectedCiv.Name;
+            _view.CivLeader = selectedCiv.Leader;
+            _view.CivAbilities = selectedCiv.Abilities;
+            _view.Name = selectedCiv.Leader;
         }
 
         private void GetCivList()
         {
-            throw new NotImplementedException();
+            civList = _civRepo.GetAll();
+            _civsBindingSource.DataSource = civList;
         }
     }
 }

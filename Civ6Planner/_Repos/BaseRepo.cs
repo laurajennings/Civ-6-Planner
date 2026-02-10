@@ -8,6 +8,6 @@ namespace Civ6Planner._Repos
 {
     public abstract class BaseRepo
     {
-        protected string connectionString;
+        protected string _connectionString;
     }
 }

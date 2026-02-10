@@ -38,6 +38,11 @@ namespace Civ6Planner.Views
             };
         }
 
+        public string Name
+        {
+            get { return tbxName.Text; }
+            set { tbxName.Text = value; }
+        }
         public string CivName
         {
             set { lblCivName.Text = value; }
@@ -72,7 +77,8 @@ namespace Civ6Planner.Views
 
         public void SetCivColumns()
         {
-            throw new NotImplementedException();
+            dataGridCivs.Columns["CivId"].Visible = false;
+            dataGridCivs.Columns["Abilities"].Visible = false;
         }
 
         // Mdi instance

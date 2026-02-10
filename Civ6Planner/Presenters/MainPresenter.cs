@@ -26,7 +26,8 @@ namespace Civ6Planner.Presenters
         {
             INewGameView view = NewGameView.GetInstance((MainView)_mainView);
             IGameRepo repo = new GameRepo(_sqlConnectionString);
-            new NewGamePresenter(view, repo, OpenGame);
+            ICivRepo civRepo = new CivRepo(_sqlConnectionString);
+            new NewGamePresenter(view, repo, civRepo, OpenGame);
         }
 
         private void OnLoadGameClicked(object sender, EventArgs e)
