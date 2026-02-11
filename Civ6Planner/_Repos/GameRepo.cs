@@ -30,7 +30,15 @@ namespace Civ6Planner._Repos
 
         public void Delete(int gameId)
         {
-            throw new NotImplementedException();
+            using (var connection = new SQLiteConnection(_connectionString))
+            using (var command = new SQLiteCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "DELETE FROM games WHERE game_id = @game_id";
+                command.Parameters.AddWithValue("@game_id", gameId);
+                command.ExecuteNonQuery();
+            }
         }
 
         public void Edit(GameModel gameModel)

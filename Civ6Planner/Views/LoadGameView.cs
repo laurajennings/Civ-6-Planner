@@ -12,6 +12,8 @@ namespace Civ6Planner.Views
 {
     public partial class LoadGameView : Form, ILoadGameView
     {
+        private string _message;
+        private bool _isSuccessful;
         public LoadGameView()
         {
             InitializeComponent();
@@ -34,9 +36,21 @@ namespace Civ6Planner.Views
             };
         }
 
-        public string SearchName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool IsSuccessful { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Message { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string SearchName
+        {
+            get { return tbxSearch.Text; }
+            set { tbxSearch.Text = value; }
+        }
+        public bool IsSuccessful
+        {
+            get { return _isSuccessful; }
+            set { _isSuccessful = value; }
+        }
+        public string Message
+        {
+            get { return _message; }
+            set { _message = value; }
+        }
 
         public event EventHandler SearchEvent;
         public event EventHandler DeleteClicked;
