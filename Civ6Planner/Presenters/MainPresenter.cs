@@ -27,7 +27,7 @@ namespace Civ6Planner.Presenters
             INewGameView view = NewGameView.GetInstance((MainView)_mainView);
             IGameRepo repo = new GameRepo(_sqlConnectionString);
             ICivRepo civRepo = new CivRepo(_sqlConnectionString);
-            new NewGamePresenter(view, repo, civRepo, OpenGame);
+            new NewGamePresenter(view, repo, civRepo, OpenGame, ShowMessage);
         }
 
         private void OnLoadGameClicked(object sender, EventArgs e)
@@ -37,7 +37,15 @@ namespace Civ6Planner.Presenters
 
         private void OpenGame(GameModel game)
         {
-
+            IGameView view = GameView.GetInstance((MainView)_mainView);
+            IGameRepo repo = new GameRepo(_sqlConnectionString);
+            new GamePresenter(view, repo, game);
         }
+
+        private void ShowMessage(string message) 
+        {
+            _mainView.ShowMessage(message);
+        }
+
     }
 }

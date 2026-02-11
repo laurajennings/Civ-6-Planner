@@ -35,6 +35,7 @@ namespace Civ6Planner.Views
             btnCancel.Click += delegate
             {
                 CancelClicked?.Invoke(this, EventArgs.Empty);
+                this.Close();
             };
         }
 

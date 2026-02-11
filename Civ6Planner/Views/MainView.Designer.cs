@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             menuStrip1 = new MenuStrip();
             menuStripItemNewGame = new ToolStripMenuItem();
             menuStripItemLoadGame = new ToolStripMenuItem();
+            pnlMessage = new Panel();
+            lblMessage = new Label();
+            timerMessage = new System.Windows.Forms.Timer(components);
             menuStrip1.SuspendLayout();
+            pnlMessage.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -55,11 +60,37 @@
             menuStripItemLoadGame.Size = new Size(79, 20);
             menuStripItemLoadGame.Text = "Load Game";
             // 
+            // pnlMessage
+            // 
+            pnlMessage.BackColor = SystemColors.ControlDark;
+            pnlMessage.Controls.Add(lblMessage);
+            pnlMessage.Location = new Point(588, 383);
+            pnlMessage.Name = "pnlMessage";
+            pnlMessage.Size = new Size(200, 55);
+            pnlMessage.TabIndex = 2;
+            pnlMessage.Visible = false;
+            // 
+            // lblMessage
+            // 
+            lblMessage.AutoSize = true;
+            lblMessage.Font = new Font("Segoe UI", 9F);
+            lblMessage.Location = new Point(18, 22);
+            lblMessage.Name = "lblMessage";
+            lblMessage.Size = new Size(38, 15);
+            lblMessage.TabIndex = 0;
+            lblMessage.Text = "label1";
+            // 
+            // timerMessage
+            // 
+            timerMessage.Enabled = true;
+            timerMessage.Interval = 4000;
+            // 
             // MainView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(pnlMessage);
             Controls.Add(menuStrip1);
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
@@ -67,6 +98,8 @@
             Text = "MainView";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            pnlMessage.ResumeLayout(false);
+            pnlMessage.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -76,5 +109,8 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem menuStripItemNewGame;
         private ToolStripMenuItem menuStripItemLoadGame;
+        private Panel pnlMessage;
+        private Label lblMessage;
+        private System.Windows.Forms.Timer timerMessage;
     }
 }
