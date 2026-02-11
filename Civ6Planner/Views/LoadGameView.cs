@@ -30,5 +30,15 @@ namespace Civ6Planner.Views
         {
             dataGridGames.DataSource = gamesList;
         }
+
+        private static LoadGameView _instance;
+        public static LoadGameView GetInstance(Form parentContainer)
+        {
+            _instance = new LoadGameView();
+            _instance.MdiParent = parentContainer;
+            _instance.FormBorderStyle = FormBorderStyle.None;
+            _instance.Dock = DockStyle.Fill;
+            return _instance;
+        }
     }
 }

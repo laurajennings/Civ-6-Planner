@@ -40,7 +40,26 @@ namespace Civ6Planner._Repos
 
         public IEnumerable<GameModel> GetAll()
         {
-            throw new NotImplementedException();
+            var gameList = new List<GameModel>();
+            using (var connection = new SQLiteConnection(_connectionString))
+            using (var command = new SQLiteCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "SELECT * FROM games";
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var gameModel = new GameModel();
+                        gameModel.GameId = Convert.ToInt32(reader[0]);
+                        gameModel.Name = reader[1].ToString();
+                        gameModel.CivId = Convert.ToInt32(reader[2]);
+                        gameList.Add(gameModel);
+                    }
+                }
+            }
+            return gameList;
         }
     }
 }
