@@ -1,4 +1,5 @@
-﻿using Civ6Planner.Models;
+﻿using Civ6Planner._Repos;
+using Civ6Planner.Models;
 using Civ6Planner.Views;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,10 @@ namespace Civ6Planner.Presenters
 
         private void OnNewGameClicked(object sender, EventArgs e)
         {
-
+            INewGameView view = NewGameView.GetInstance((MainView)_mainView);
+            IGameRepo repo = new GameRepo(_sqlConnectionString);
+            ICivRepo civRepo = new CivRepo(_sqlConnectionString);
+            new NewGamePresenter(view, repo, civRepo, OpenGame);
         }
 
         private void OnLoadGameClicked(object sender, EventArgs e)
