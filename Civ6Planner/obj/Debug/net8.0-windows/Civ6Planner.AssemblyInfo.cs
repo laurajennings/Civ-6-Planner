@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Civ6Planner")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c83f949974bfe0feb5f2625dccebe894e4c2ccd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f3fedaed70e09a5371ce68a3cda71ba1b85540f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Civ6Planner")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Civ6Planner")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

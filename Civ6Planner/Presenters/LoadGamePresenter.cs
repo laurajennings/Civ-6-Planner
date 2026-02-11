@@ -14,14 +14,16 @@ namespace Civ6Planner.Presenters
         private ILoadGameView _view;
         private IGameRepo _repo;
         private readonly Action<GameModel> _onGameLoaded;
+        private readonly Action<string> _onShowMessage;
         private BindingSource _gamesBindingSource;
         private IEnumerable<GameModel> _gameList;
 
-        public LoadGamePresenter(ILoadGameView view, IGameRepo repo, Action<GameModel> onGameLoaded)
+        public LoadGamePresenter(ILoadGameView view, IGameRepo repo, Action<GameModel> onGameLoaded, Action<string> onShowMessage)
         {
             _view = view;
             _repo = repo;
             _onGameLoaded = onGameLoaded;
+            _onShowMessage = onShowMessage;
             _gamesBindingSource = new BindingSource();
 
             _view.SearchEvent += OnSearchEvent;
@@ -54,6 +56,7 @@ namespace Civ6Planner.Presenters
                 _view.IsSuccessful = false;
                 _view.Message = ex.Message;
             }
+            _onShowMessage?.Invoke(_view.Message);
         }
 
         private void OnLoadClicked(object? sender, EventArgs e)
