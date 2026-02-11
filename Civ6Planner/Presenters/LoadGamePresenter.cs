@@ -2,6 +2,7 @@
 using Civ6Planner.Views;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,13 +13,15 @@ namespace Civ6Planner.Presenters
     {
         private ILoadGameView _view;
         private IGameRepo _repo;
+        private readonly Action<GameModel> _onGameLoaded;
         private BindingSource _gamesBindingSource;
         private IEnumerable<GameModel> _gameList;
 
-        public LoadGamePresenter(ILoadGameView view, IGameRepo repo)
+        public LoadGamePresenter(ILoadGameView view, IGameRepo repo, Action<GameModel> onGameLoaded)
         {
             _view = view;
             _repo = repo;
+            _onGameLoaded = onGameLoaded;
             _gamesBindingSource = new BindingSource();
 
             _view.SearchEvent += OnSearchEvent;
@@ -49,7 +52,8 @@ namespace Civ6Planner.Presenters
 
         private void OnLoadClicked(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var selectedGame = (GameModel)_gamesBindingSource.Current;
+            _onGameLoaded?.Invoke(selectedGame);
         }
 
         private void GetAllGames()

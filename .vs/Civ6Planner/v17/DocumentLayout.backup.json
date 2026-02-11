@@ -11,16 +11,16 @@
       "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\presenters\\loadgamepresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\views\\loadgameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\views\\loadgameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\presenters\\mainpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\presenters\\mainpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\views\\iloadgameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\views\\iloadgameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\views\\loadgameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\views\\loadgameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\presenters\\newgamepresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -72,7 +72,7 @@
               "RelativeDocumentMoniker": "Civ6Planner\\Presenters\\LoadGamePresenter.cs",
               "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Presenters\\LoadGamePresenter.cs",
               "RelativeToolTip": "Civ6Planner\\Presenters\\LoadGamePresenter.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAA1wDoAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAgwDUAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-11T06:02:05.865Z",
               "EditorCaption": ""
@@ -85,14 +85,14 @@
               "RelativeDocumentMoniker": "Civ6Planner\\Views\\LoadGameView.cs",
               "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\LoadGameView.cs",
               "RelativeToolTip": "Civ6Planner\\Views\\LoadGameView.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACkAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-11T05:48:58.289Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "LoadGameView.cs [Design]",
               "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\LoadGameView.cs",
               "RelativeDocumentMoniker": "Civ6Planner\\Views\\LoadGameView.cs",
@@ -104,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ILoadGameView.cs",
               "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\ILoadGameView.cs",
               "RelativeDocumentMoniker": "Civ6Planner\\Views\\ILoadGameView.cs",
@@ -129,7 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MainPresenter.cs",
               "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Presenters\\MainPresenter.cs",
               "RelativeDocumentMoniker": "Civ6Planner\\Presenters\\MainPresenter.cs",

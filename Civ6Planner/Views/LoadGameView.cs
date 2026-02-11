@@ -15,6 +15,15 @@ namespace Civ6Planner.Views
         public LoadGameView()
         {
             InitializeComponent();
+            Events();
+        }
+
+        private void Events()
+        {
+            btnLoad.Click += delegate
+            {
+                LoadClicked?.Invoke(this, EventArgs.Empty);
+            };
         }
 
         public string SearchName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
