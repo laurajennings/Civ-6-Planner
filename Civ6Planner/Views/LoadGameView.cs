@@ -28,6 +28,10 @@ namespace Civ6Planner.Views
             {
                 this.Close();
             };
+            btnDelete.Click += delegate
+            {
+                DeleteClicked?.Invoke(this, EventArgs.Empty);
+            };
         }
 
         public string SearchName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

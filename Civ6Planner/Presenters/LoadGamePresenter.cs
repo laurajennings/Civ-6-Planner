@@ -41,7 +41,19 @@ namespace Civ6Planner.Presenters
 
         private void OnDeleteClicked(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var selectedGame = (GameModel)_gamesBindingSource.Current;
+                _repo.Delete(selectedGame.GameId);
+                _view.IsSuccessful = true;
+                _view.Message = "Game deleted";
+                GetAllGames();
+            }
+            catch (Exception ex)
+            {
+                _view.IsSuccessful = false;
+                _view.Message = ex.Message;
+            }
         }
 
         private void OnLoadClicked(object? sender, EventArgs e)
