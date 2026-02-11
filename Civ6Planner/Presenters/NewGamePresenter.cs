@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Civ6Planner.Presenters
 {
@@ -51,7 +52,7 @@ namespace Civ6Planner.Presenters
                 _repo.Add(gameModel);
                 _view.Message = "Game added successfully";
                 _onGameLoaded?.Invoke(gameModel);
-                // clear fields
+                ClearFields();
             }
             catch (Exception ex)
             {
@@ -63,7 +64,7 @@ namespace Civ6Planner.Presenters
 
         private void OnCancelClicked(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            ClearFields();
         }
 
         private void OnCivSelectionChanged(object? sender, EventArgs e)
@@ -79,6 +80,14 @@ namespace Civ6Planner.Presenters
         {
             civList = _civRepo.GetAll();
             _civsBindingSource.DataSource = civList;
+        }
+
+        private void ClearFields()
+        {
+            _view.Name = "";
+            _view.CivName = "";
+            _view.CivLeader = "";
+            _view.CivAbilities = "";
         }
     }
 }
