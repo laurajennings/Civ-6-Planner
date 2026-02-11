@@ -3,82 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\",
   "Documents": [
     {
-<<<<<<< HEAD
-=======
-      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\views\\newgameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\views\\newgameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\presenters\\newgamepresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\presenters\\newgamepresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\views\\inewgameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\views\\inewgameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
->>>>>>> 8ce6d6cecf233742cf195819cd4bcc7b221bcab1
-      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\presenters\\mainpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\presenters\\mainpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-<<<<<<< HEAD
-=======
-      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\views\\newgameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\views\\newgameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\_repos\\civrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\_repos\\civrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\_repos\\gamerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\_repos\\gamerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\models\\icivrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\models\\icivrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\models\\civmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\models\\civmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
->>>>>>> 8ce6d6cecf233742cf195819cd4bcc7b221bcab1
-      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\models\\gamemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\models\\gamemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\_repos\\baserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\_repos\\baserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\models\\igamerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\models\\igamerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\views\\igameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\views\\igameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\views\\imainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\views\\imainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\civ6planner\\views\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\views\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\views\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\views\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\civ6planner\\views\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-=======
-      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\views\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
->>>>>>> 8ce6d6cecf233742cf195819cd4bcc7b221bcab1
-      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\views\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\presenters\\newgamepresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\presenters\\newgamepresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\views\\newgameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\views\\newgameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\presenters\\mainpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\presenters\\mainpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\views\\imainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\views\\imainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\views\\newgameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\views\\newgameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\views\\igameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\views\\igameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|c:\\users\\laura\\documents\\appdev\\microsoft\\civ6planner\\civ6planner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15262542-9C7C-4939-A3F4-DCABB21E8775}|Civ6Planner\\Civ6Planner.csproj|solutionrelative:civ6planner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -96,282 +54,59 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 0,
-              "Title": "MainPresenter.cs",
-              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Presenters\\MainPresenter.cs",
-              "RelativeDocumentMoniker": "Civ6Planner\\Presenters\\MainPresenter.cs",
-              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Presenters\\MainPresenter.cs",
-              "RelativeToolTip": "Civ6Planner\\Presenters\\MainPresenter.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T03:55:00.144Z",
-=======
-              "DocumentIndex": 8,
-              "Title": "CivModel.cs",
-              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Models\\CivModel.cs",
-              "RelativeDocumentMoniker": "Civ6Planner\\Models\\CivModel.cs",
-              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Models\\CivModel.cs",
-              "RelativeToolTip": "Civ6Planner\\Models\\CivModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T07:08:02.286Z",
->>>>>>> 8ce6d6cecf233742cf195819cd4bcc7b221bcab1
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 2,
-              "Title": "IGameRepo.cs",
-              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Models\\IGameRepo.cs",
-              "RelativeDocumentMoniker": "Civ6Planner\\Models\\IGameRepo.cs",
-              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Models\\IGameRepo.cs",
-              "RelativeToolTip": "Civ6Planner\\Models\\IGameRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T03:31:04.191Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GameModel.cs",
-              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Models\\GameModel.cs",
-              "RelativeDocumentMoniker": "Civ6Planner\\Models\\GameModel.cs",
-              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Models\\GameModel.cs",
-              "RelativeToolTip": "Civ6Planner\\Models\\GameModel.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCQAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T03:10:49.617Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IMainView.cs",
               "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\IMainView.cs",
               "RelativeDocumentMoniker": "Civ6Planner\\Views\\IMainView.cs",
               "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\IMainView.cs",
               "RelativeToolTip": "Civ6Planner\\Views\\IMainView.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T03:58:50.295Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainView.cs",
-              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\MainView.cs",
-              "RelativeDocumentMoniker": "Civ6Planner\\Views\\MainView.cs",
-              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\MainView.cs",
-              "RelativeToolTip": "Civ6Planner\\Views\\MainView.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T03:54:36.151Z",
+              "WhenOpened": "2026-02-11T04:33:26.916Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MainView.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\MainView.cs",
-              "RelativeDocumentMoniker": "Civ6Planner\\Views\\MainView.cs",
-              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\MainView.cs [Design]",
-              "RelativeToolTip": "Civ6Planner\\Views\\MainView.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "MainPresenter.cs",
+              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Presenters\\MainPresenter.cs",
+              "RelativeDocumentMoniker": "Civ6Planner\\Presenters\\MainPresenter.cs",
+              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Presenters\\MainPresenter.cs",
+              "RelativeToolTip": "Civ6Planner\\Presenters\\MainPresenter.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwCwAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T03:50:32.875Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Program.cs",
-              "RelativeDocumentMoniker": "Civ6Planner\\Program.cs",
-              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Program.cs",
-              "RelativeToolTip": "Civ6Planner\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T03:46:21.858Z"
-=======
-              "DocumentIndex": 7,
-              "Title": "ICivRepo.cs",
-              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Models\\ICivRepo.cs",
-              "RelativeDocumentMoniker": "Civ6Planner\\Models\\ICivRepo.cs",
-              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Models\\ICivRepo.cs",
-              "RelativeToolTip": "Civ6Planner\\Models\\ICivRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T07:05:44.386Z",
+              "WhenOpened": "2026-02-11T03:45:29.417Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MainView.cs",
+              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\MainView.cs",
+              "RelativeDocumentMoniker": "Civ6Planner\\Views\\MainView.cs",
+              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\MainView.cs",
+              "RelativeToolTip": "Civ6Planner\\Views\\MainView.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T03:56:39.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "NewGamePresenter.cs",
               "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Presenters\\NewGamePresenter.cs",
               "RelativeDocumentMoniker": "Civ6Planner\\Presenters\\NewGamePresenter.cs",
               "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Presenters\\NewGamePresenter.cs",
               "RelativeToolTip": "Civ6Planner\\Presenters\\NewGamePresenter.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA1wCUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAgwDwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T06:30:45.536Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GameRepo.cs",
-              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\_Repos\\GameRepo.cs",
-              "RelativeDocumentMoniker": "Civ6Planner\\_Repos\\GameRepo.cs",
-              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\_Repos\\GameRepo.cs",
-              "RelativeToolTip": "Civ6Planner\\_Repos\\GameRepo.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T06:26:10.59Z",
+              "WhenOpened": "2026-02-11T03:32:21.852Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "NewGameView.cs",
-              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\NewGameView.cs",
-              "RelativeDocumentMoniker": "Civ6Planner\\Views\\NewGameView.cs",
-              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\NewGameView.cs",
-              "RelativeToolTip": "Civ6Planner\\Views\\NewGameView.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAmwE8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T05:04:09.712Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NewGameView.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\NewGameView.cs",
-              "RelativeDocumentMoniker": "Civ6Planner\\Views\\NewGameView.cs",
-              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\NewGameView.cs [Design]",
-              "RelativeToolTip": "Civ6Planner\\Views\\NewGameView.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T04:59:00.183Z",
-              "EditorCaption": " [Design]"
->>>>>>> 8ce6d6cecf233742cf195819cd4bcc7b221bcab1
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-<<<<<<< HEAD
-              "Title": "IGameView.cs",
-              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\IGameView.cs",
-              "RelativeDocumentMoniker": "Civ6Planner\\Views\\IGameView.cs",
-              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\IGameView.cs",
-              "RelativeToolTip": "Civ6Planner\\Views\\IGameView.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T03:42:58.287Z"
-=======
-              "Title": "MainPresenter.cs",
-              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Presenters\\MainPresenter.cs",
-              "RelativeDocumentMoniker": "Civ6Planner\\Presenters\\MainPresenter.cs",
-              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Presenters\\MainPresenter.cs",
-              "RelativeToolTip": "Civ6Planner\\Presenters\\MainPresenter.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T03:55:00.144Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "INewGameView.cs",
-              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\INewGameView.cs",
-              "RelativeDocumentMoniker": "Civ6Planner\\Views\\INewGameView.cs",
-              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\INewGameView.cs",
-              "RelativeToolTip": "Civ6Planner\\Views\\INewGameView.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T04:49:06.17Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CivRepo.cs",
-              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\_Repos\\CivRepo.cs",
-              "RelativeDocumentMoniker": "Civ6Planner\\_Repos\\CivRepo.cs",
-              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\_Repos\\CivRepo.cs",
-              "RelativeToolTip": "Civ6Planner\\_Repos\\CivRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T07:11:23.202Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IGameRepo.cs",
-              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Models\\IGameRepo.cs",
-              "RelativeDocumentMoniker": "Civ6Planner\\Models\\IGameRepo.cs",
-              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Models\\IGameRepo.cs",
-              "RelativeToolTip": "Civ6Planner\\Models\\IGameRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T03:31:04.191Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GameModel.cs",
-              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Models\\GameModel.cs",
-              "RelativeDocumentMoniker": "Civ6Planner\\Models\\GameModel.cs",
-              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Models\\GameModel.cs",
-              "RelativeToolTip": "Civ6Planner\\Models\\GameModel.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCQAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T03:10:49.617Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BaseRepo.cs",
-              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\_Repos\\BaseRepo.cs",
-              "RelativeDocumentMoniker": "Civ6Planner\\_Repos\\BaseRepo.cs",
-              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\_Repos\\BaseRepo.cs",
-              "RelativeToolTip": "Civ6Planner\\_Repos\\BaseRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T06:29:22.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IMainView.cs",
-              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\IMainView.cs",
-              "RelativeDocumentMoniker": "Civ6Planner\\Views\\IMainView.cs",
-              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\IMainView.cs",
-              "RelativeToolTip": "Civ6Planner\\Views\\IMainView.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T03:58:50.295Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "MainView.cs",
-              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\MainView.cs",
-              "RelativeDocumentMoniker": "Civ6Planner\\Views\\MainView.cs",
-              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\MainView.cs",
-              "RelativeToolTip": "Civ6Planner\\Views\\MainView.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T03:54:36.151Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
               "Title": "MainView.cs [Design]",
               "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\MainView.cs",
               "RelativeDocumentMoniker": "Civ6Planner\\Views\\MainView.cs",
@@ -383,7 +118,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 3,
+              "Title": "NewGameView.cs",
+              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\NewGameView.cs",
+              "RelativeDocumentMoniker": "Civ6Planner\\Views\\NewGameView.cs",
+              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\NewGameView.cs",
+              "RelativeToolTip": "Civ6Planner\\Views\\NewGameView.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T03:37:22.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NewGameView.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\NewGameView.cs",
+              "RelativeDocumentMoniker": "Civ6Planner\\Views\\NewGameView.cs",
+              "ToolTip": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\NewGameView.cs [Design]",
+              "RelativeToolTip": "Civ6Planner\\Views\\NewGameView.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T03:37:10.955Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Program.cs",
               "RelativeDocumentMoniker": "Civ6Planner\\Program.cs",
@@ -391,12 +151,11 @@
               "RelativeToolTip": "Civ6Planner\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T03:46:21.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-10T03:46:21.858Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 7,
               "Title": "IGameView.cs",
               "DocumentMoniker": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Views\\IGameView.cs",
               "RelativeDocumentMoniker": "Civ6Planner\\Views\\IGameView.cs",
@@ -404,9 +163,7 @@
               "RelativeToolTip": "Civ6Planner\\Views\\IGameView.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T03:42:58.287Z",
-              "EditorCaption": ""
->>>>>>> 8ce6d6cecf233742cf195819cd4bcc7b221bcab1
+              "WhenOpened": "2026-02-10T03:42:58.287Z"
             }
           ]
         }

@@ -10,5 +10,7 @@ namespace Civ6Planner.Views
     {
         event EventHandler NewGameClicked;
         event EventHandler LoadGameClicked;
+
+        void ShowMessage(string message);
     }
 }

@@ -2,6 +2,7 @@
 using Civ6Planner.Views;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,15 +15,17 @@ namespace Civ6Planner.Presenters
         private IGameRepo _repo;
         private ICivRepo _civRepo;
         private readonly Action<GameModel> _onGameLoaded;
+        private readonly Action<string> _onShowMessage;
         private IEnumerable<CivModel> civList;
         private BindingSource _civsBindingSource;
 
-        public NewGamePresenter(INewGameView view, IGameRepo repo, ICivRepo civRepo, Action<GameModel> onGameLoaded)
+        public NewGamePresenter(INewGameView view, IGameRepo repo, ICivRepo civRepo, Action<GameModel> onGameLoaded, Action<string> onShowMessage)
         {
             _view = view;
             _repo = repo;
             _civRepo = civRepo;
             _onGameLoaded = onGameLoaded;
+            _onShowMessage = onShowMessage;
 
             _view.SaveClicked += OnSaveClicked;
             _view.CancelClicked += OnCancelClicked;
@@ -38,7 +41,24 @@ namespace Civ6Planner.Presenters
 
         private void OnSaveClicked(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var gameModel = new GameModel();
+            gameModel.Name = _view.Name;
+            var selectedCiv = (CivModel)_civsBindingSource.Current;
+            gameModel.CivId = selectedCiv.CivId;
+            Debug.WriteLine(gameModel);
+            try
+            {
+                _repo.Add(gameModel);
+                _view.Message = "Game added successfully";
+                _onGameLoaded?.Invoke(gameModel);
+                // clear fields
+            }
+            catch (Exception ex)
+            {
+                _view.IsSuccessful = false;
+                _view.Message = ex.Message;
+            }
+            _onShowMessage?.Invoke(_view.Message);
         }
 
         private void OnCancelClicked(object? sender, EventArgs e)

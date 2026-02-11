@@ -29,9 +29,21 @@ namespace Civ6Planner.Views
             {
                 LoadGameClicked?.Invoke(this, EventArgs.Empty);
             };
+            timerMessage.Tick += delegate
+            {
+                pnlMessage.Visible = false;
+                timerMessage.Stop();
+            };
         }
 
         public event EventHandler NewGameClicked;
         public event EventHandler LoadGameClicked;
+
+        public void ShowMessage(string message)
+        {
+            pnlMessage.Visible = true;
+            lblMessage.Text = message;
+            timerMessage.Start();
+        }
     }
 }
