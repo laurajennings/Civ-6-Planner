@@ -26,7 +26,6 @@ namespace Civ6Planner.Presenters
 
             _view.SearchEvent += OnSearchEvent;
             _view.DeleteClicked += OnDeleteClicked;
-            _view.CancelClicked += OnCancelClicked;
             _view.LoadClicked += OnLoadClicked;
 
             _view.SetGameBindingSource(_gamesBindingSource);
@@ -41,11 +40,6 @@ namespace Civ6Planner.Presenters
         }
 
         private void OnDeleteClicked(object? sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OnCancelClicked(object? sender, EventArgs e)
         {
             throw new NotImplementedException();
         }

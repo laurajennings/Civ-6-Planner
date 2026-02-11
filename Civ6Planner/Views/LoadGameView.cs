@@ -24,6 +24,10 @@ namespace Civ6Planner.Views
             {
                 LoadClicked?.Invoke(this, EventArgs.Empty);
             };
+            btnCancel.Click += delegate
+            {
+                this.Close();
+            };
         }
 
         public string SearchName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
