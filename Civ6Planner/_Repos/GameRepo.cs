@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
+using System.Diagnostics;
 
 namespace Civ6Planner._Repos
 {
@@ -16,6 +17,7 @@ namespace Civ6Planner._Repos
         }
         public void Add(GameModel gameModel)
         {
+            Debug.WriteLine($"add game: {gameModel.GameId}");
             using (var connection = new SQLiteConnection(_connectionString))
             using (var command = new SQLiteCommand())
             {

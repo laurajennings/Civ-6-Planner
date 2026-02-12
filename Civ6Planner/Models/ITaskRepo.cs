@@ -11,7 +11,10 @@ namespace Civ6Planner.Models
         void Add(TaskModel taskModel);
         void Edit(TaskModel taskModel);
         void Delete(TaskModel taskModel);
+        void AddDefaultTasksToGame(int gameId);
+        IEnumerable<TaskModel> GetByGameId(int gameId);
         IEnumerable<TaskModel> GetAll();
+
         // Search by name
         // Search by boosts
         // Filter by type
