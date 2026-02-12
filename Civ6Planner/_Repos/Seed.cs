@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Civ6Planner._Repos
 {
@@ -26,8 +27,42 @@ namespace Civ6Planner._Repos
 
             if (!File.Exists(dbPath))
             {
-                Debug.WriteLine("db doesn't exist");
+                CreateDatabase();
             }
         }
+
+        private void CreateDatabase()
+        {
+            using (var connection = new SQLiteConnection(_connectionString))
+            using (var command = new SQLiteCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+
+                command.CommandText = @"CREATE TABLE IF NOT EXISTS civs(
+                                        civ_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                        name TEXT,
+                                        leader TEXT,
+                                        abilities TEXT)";
+                command.ExecuteNonQuery();
+                command.CommandText = @"CREATE TABLE IF NOT EXISTS games(
+                                        game_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                        name TEXT,
+                                        notes TEXT,
+                                        civ_id INTEGER,
+                                        FOREIGN KEY (civ_id) REFERENCES civs(civ_id))";
+                command.ExecuteNonQuery();
+                command.CommandText = @"CREATE TABLE IF NOT EXISTS tasks(
+                                        task_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                        name TEXT,
+                                        type TEXT,
+                                        boosts TEXT,
+                                        status TEXT,
+                                        game_id INTEGER,
+                                        FOREIGN KEY (game_id) REFERENCES games(game_id))";
+                command.ExecuteNonQuery();
+            }
+        }
+
     }
 }
