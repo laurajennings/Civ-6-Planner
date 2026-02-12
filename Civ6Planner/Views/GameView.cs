@@ -17,9 +17,9 @@ namespace Civ6Planner.Views
             InitializeComponent();
         }
 
-        public string CivName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string CivLeader { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string CivAbilities { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string CivName { set { lblCivName.Text = value; } }
+        public string CivLeader { set { lblCivLeader.Text = value; } }
+        public string CivAbilities { set { lblCivAbilities.Text = value; } }
         public string Notes { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
 
