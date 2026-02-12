@@ -29,30 +29,81 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            groupBox2 = new GroupBox();
+            lblCivName = new Label();
+            lblCivAbilities = new Label();
+            lblCivLeader = new Label();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Location = new Point(2, 2);
+            groupBox1.Controls.Add(lblCivLeader);
+            groupBox1.Controls.Add(lblCivAbilities);
+            groupBox1.Controls.Add(lblCivName);
+            groupBox1.Location = new Point(2, 1);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(200, 192);
+            groupBox1.Size = new Size(200, 226);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
+            groupBox1.Text = "Civ Info";
+            // 
+            // groupBox2
+            // 
+            groupBox2.Location = new Point(2, 225);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(200, 227);
+            groupBox2.TabIndex = 1;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Notes";
+            // 
+            // lblCivName
+            // 
+            lblCivName.AutoSize = true;
+            lblCivName.Location = new Point(10, 33);
+            lblCivName.Name = "lblCivName";
+            lblCivName.Size = new Size(38, 15);
+            lblCivName.TabIndex = 0;
+            lblCivName.Text = "label1";
+            // 
+            // lblCivAbilities
+            // 
+            lblCivAbilities.AutoSize = true;
+            lblCivAbilities.Location = new Point(10, 101);
+            lblCivAbilities.Name = "lblCivAbilities";
+            lblCivAbilities.Size = new Size(38, 15);
+            lblCivAbilities.TabIndex = 1;
+            lblCivAbilities.Text = "label2";
+            // 
+            // lblCivLeader
+            // 
+            lblCivLeader.AutoSize = true;
+            lblCivLeader.Location = new Point(10, 65);
+            lblCivLeader.Name = "lblCivLeader";
+            lblCivLeader.Size = new Size(38, 15);
+            lblCivLeader.TabIndex = 2;
+            lblCivLeader.Text = "label3";
             // 
             // GameView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "GameView";
             Text = "GameView";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private GroupBox groupBox1;
+        private Label lblCivLeader;
+        private Label lblCivAbilities;
+        private Label lblCivName;
+        private GroupBox groupBox2;
     }
 }

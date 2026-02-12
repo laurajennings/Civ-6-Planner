@@ -41,7 +41,26 @@ namespace Civ6Planner._Repos
 
         public CivModel GetById(int civId)
         {
-            throw new NotImplementedException();
+            var civModel = new CivModel();
+            using (var connection = new SQLiteConnection(_connectionString))
+            using (var command = new SQLiteCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "SELECT * FROM civs WHERE civ_id = @civ_id";
+                command.Parameters.AddWithValue("@civ_id", civId);
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        civModel.CivId = Convert.ToInt32(reader[0]);
+                        civModel.Name = reader[1].ToString();
+                        civModel.Leader = reader[2].ToString();
+                        civModel.Abilities = reader[3].ToString();
+                    }
+                }
+            }
+            return civModel;
         }
     }
 }

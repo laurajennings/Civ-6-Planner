@@ -8,9 +8,9 @@ namespace Civ6Planner.Views
 {
     public interface IGameView
     {
-        string CivName { get; set; }
-        string CivLeader {  get; set; }
-        string CivAbilities { get; set; }
+        string CivName { set; }
+        string CivLeader { set; }
+        string CivAbilities { set; }
         string Notes { get; set; }
 
         void Show();
