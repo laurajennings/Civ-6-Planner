@@ -60,7 +60,7 @@ namespace Civ6Planner._Repos
                                         boosts TEXT,
                                         status TEXT,
                                         game_id INTEGER,
-                                        FOREIGN KEY (game_id) REFERENCES games(game_id))";
+                                        FOREIGN KEY (game_id) REFERENCES games(game_id) ON DELETE CASCADE)";
                 command.ExecuteNonQuery();
                 InsertCivs(connection);
             }
@@ -93,6 +93,7 @@ namespace Civ6Planner._Repos
             }
             var civList = new List<CivModel>();
             var lines = File.ReadAllLines(csvPathCivs);
+            
             for (int i = 1; i < lines.Length; i++)
             {
                 var line = lines[i];
@@ -110,6 +111,5 @@ namespace Civ6Planner._Repos
             }
             return civList;
         }
-
     }
 }

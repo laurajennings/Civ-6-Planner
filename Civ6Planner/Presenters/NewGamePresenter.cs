@@ -15,16 +15,18 @@ namespace Civ6Planner.Presenters
         private INewGameView _view;
         private IGameRepo _repo;
         private ICivRepo _civRepo;
+        private ITaskRepo _taskRepo;
         private readonly Action<GameModel> _onGameLoaded;
         private readonly Action<string> _onShowMessage;
         private IEnumerable<CivModel> civList;
         private BindingSource _civsBindingSource;
 
-        public NewGamePresenter(INewGameView view, IGameRepo repo, ICivRepo civRepo, Action<GameModel> onGameLoaded, Action<string> onShowMessage)
+        public NewGamePresenter(INewGameView view, IGameRepo repo, ICivRepo civRepo, ITaskRepo taskRepo, Action<GameModel> onGameLoaded, Action<string> onShowMessage)
         {
             _view = view;
             _repo = repo;
             _civRepo = civRepo;
+            _taskRepo = taskRepo;
             _onGameLoaded = onGameLoaded;
             _onShowMessage = onShowMessage;
 
@@ -50,6 +52,7 @@ namespace Civ6Planner.Presenters
             try
             {
                 _repo.Add(gameModel);
+                _taskRepo.AddDefaultTasksToGame(gameModel.GameId);
                 _view.Message = "Game added successfully";
                 _onGameLoaded?.Invoke(gameModel);
                 ClearFields();
