@@ -15,6 +15,7 @@ namespace Civ6Planner._Repos
     {
         private readonly string _connectionString;
         private readonly string csvPathCivs = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "civs.csv");
+        private readonly string csvPathTasks = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "tasks.csv");
 
         public Seed(string connectionString)
         {
@@ -63,6 +64,7 @@ namespace Civ6Planner._Repos
                                         FOREIGN KEY (game_id) REFERENCES games(game_id))";
                 command.ExecuteNonQuery();
                 InsertCivs(connection);
+                InsertTasks(connection);
             }
         }
 
@@ -93,6 +95,7 @@ namespace Civ6Planner._Repos
             }
             var civList = new List<CivModel>();
             var lines = File.ReadAllLines(csvPathCivs);
+            
             for (int i = 1; i < lines.Length; i++)
             {
                 var line = lines[i];
@@ -108,8 +111,58 @@ namespace Civ6Planner._Repos
                     });
                 }
             }
+            
             return civList;
         }
 
+        protected void InsertTasks(SQLiteConnection conneciton)
+        {
+            var taskList = ReadTasksFromCsv();
+            
+            using (var transaction =  conneciton.BeginTransaction())
+            using (var command = new SQLiteCommand(conneciton))
+            {
+                command.CommandText = "INSERT INTO tasks (name, type, boosts, status) VALUES (@name, @type, @boosts, @status)";
+                foreach (var task in taskList)
+                {
+                    Debug.WriteLine($"insert tasks: {task.Name}");
+                    command.Parameters.Clear();
+                    command.Parameters.AddWithValue("@name", task.Name);
+                    command.Parameters.AddWithValue("@type", task.Type);
+                    command.Parameters.AddWithValue("@boosts", task.Boosts);
+                    command.Parameters.AddWithValue("@status", task.Status);
+                    command.ExecuteNonQuery();
+                }
+                transaction.Commit();
+            }
+        }
+
+        private List<TaskModel> ReadTasksFromCsv()
+        {
+            if (!File.Exists(csvPathTasks))
+            {
+                throw new FileNotFoundException($"csv not found: {csvPathTasks}");
+            }
+            var taskList = new List<TaskModel>();
+            var lines = File.ReadAllLines(csvPathTasks);
+
+            for (int i = 1; i < lines.Length; i++)
+            {
+                var line = lines[i];
+                if (string.IsNullOrWhiteSpace(line)) continue;
+                var values = line.Split(',');
+                if (values.Length >= 4)
+                {
+                    taskList.Add(new TaskModel
+                    {
+                        Name = values[0].Trim(),
+                        Type = values[1].Trim(),
+                        Boosts = values[2].Trim(),
+                        Status = values[3].Trim()
+                    });
+                }
+            }
+            return taskList;
+        }
     }
 }

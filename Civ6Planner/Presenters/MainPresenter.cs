@@ -42,7 +42,8 @@ namespace Civ6Planner.Presenters
             IGameView view = GameView.GetInstance((MainView)_mainView);
             IGameRepo repo = new GameRepo(_sqlConnectionString);
             ICivRepo civRepo = new CivRepo(_sqlConnectionString);
-            new GamePresenter(view, repo, civRepo, game);
+            ITaskRepo taskRepo = new TaskRepo(_sqlConnectionString);
+            new GamePresenter(view, repo, civRepo, taskRepo, game);
         }
 
         private void ShowMessage(string message) 
