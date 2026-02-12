@@ -1,3 +1,4 @@
+using Civ6Planner._Repos;
 using Civ6Planner.Presenters;
 using Civ6Planner.Views;
 using System.Configuration;
@@ -16,7 +17,8 @@ namespace Civ6Planner
             Application.SetCompatibleTextRenderingDefault(false);
 
             string sqlConnectionString = ConfigurationManager.ConnectionStrings["SqlDb"].ConnectionString;
-            // seed
+            var seed = new Seed(sqlConnectionString);
+            seed.CheckDbExists();
 
             IMainView view = new MainView();
             new MainPresenter(view, sqlConnectionString);
