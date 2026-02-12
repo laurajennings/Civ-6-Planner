@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Civ6Planner.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Diagnostics;
@@ -61,7 +62,53 @@ namespace Civ6Planner._Repos
                                         game_id INTEGER,
                                         FOREIGN KEY (game_id) REFERENCES games(game_id))";
                 command.ExecuteNonQuery();
+                InsertCivs(connection);
             }
+        }
+
+        protected virtual void InsertCivs(SQLiteConnection connection)
+        {
+            var civList = ReadCivsFromCsv();
+            using (var transaction  = connection.BeginTransaction())
+            using (var command = new SQLiteCommand(connection))
+            {
+                command.CommandText = "INSERT INTO civs (name, leader, abilities) VALUES (@name, @leader, @abilities)";
+                foreach (var civ in civList)
+                {
+                    command.Parameters.Clear();
+                    command.Parameters.AddWithValue("@name", civ.Name);
+                    command.Parameters.AddWithValue("@leader", civ.Leader);
+                    command.Parameters.AddWithValue("@abilities", civ.Abilities);
+                    command.ExecuteNonQuery();
+                }
+                transaction.Commit();
+            }
+        }
+
+        private List<CivModel> ReadCivsFromCsv()
+        {
+            if (!File.Exists(csvPathCivs))
+            {
+                throw new FileNotFoundException($"csv not found: {csvPathCivs}");
+            }
+            var civList = new List<CivModel>();
+            var lines = File.ReadAllLines(csvPathCivs);
+            for (int i = 1; i < lines.Length; i++)
+            {
+                var line = lines[i];
+                if (string.IsNullOrWhiteSpace(line)) continue;
+                var values = line.Split(',');
+                if (values.Length >= 3)
+                {
+                    civList.Add(new CivModel
+                    {
+                        Name = values[0].Trim(),
+                        Leader = values[1].Trim(),
+                        Abilities = values[2].Trim()
+                    });
+                }
+            }
+            return civList;
         }
 
     }
