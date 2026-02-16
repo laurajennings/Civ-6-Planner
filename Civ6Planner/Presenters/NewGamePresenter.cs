@@ -48,11 +48,10 @@ namespace Civ6Planner.Presenters
             gameModel.Name = _view.Name;
             var selectedCiv = (CivModel)_civsBindingSource.Current;
             gameModel.CivId = selectedCiv.CivId;
-            Debug.WriteLine(gameModel);
             try
             {
-                _repo.Add(gameModel);
-                _taskRepo.AddDefaultTasksToGame(gameModel.GameId);
+                int gameId = _repo.Add(gameModel);
+                _taskRepo.AddDefaultTasksToGame(gameId);
                 _view.Message = "Game added successfully";
                 _onGameLoaded?.Invoke(gameModel);
                 ClearFields();

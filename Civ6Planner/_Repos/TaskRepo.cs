@@ -68,7 +68,6 @@ namespace Civ6Planner._Repos
                 command.CommandText = "INSERT INTO tasks (name, type, boosts, status, game_id) VALUES (@name, @type, @boosts, @status, @game_id)";
                 foreach (var task in taskList)
                 {
-                    Debug.WriteLine($"insert tasks: {gameId}");
                     command.Parameters.Clear();
                     command.Parameters.AddWithValue("@name", task.Name);
                     command.Parameters.AddWithValue("@type", task.Type);
@@ -78,7 +77,6 @@ namespace Civ6Planner._Repos
                     command.ExecuteNonQuery();
                 }
             }
-            Debug.WriteLine($"Created {taskList.Count} tasks for game {gameId}");
         }
 
         private List<TaskModel> ReadTasksFromCsv()
