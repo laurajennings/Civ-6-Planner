@@ -109,7 +109,29 @@ namespace Civ6Planner._Repos
 
         public IEnumerable<TaskModel> GetByGameId(int gameId)
         {
-            throw new NotImplementedException();
+            var taskList = new List<TaskModel>();
+            using (var connection = new SQLiteConnection(_connectionString))
+            using (var command = new SQLiteCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "SELECT * FROM tasks WHERE game_id = @game_id";
+                command.Parameters.AddWithValue("@game_id", gameId);
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var taskModel = new TaskModel();
+                        taskModel.TaskId = Convert.ToInt32(reader[0]);
+                        taskModel.Name = reader[1].ToString();
+                        taskModel.Type = reader[2].ToString();
+                        taskModel.Boosts = reader[3].ToString();
+                        taskModel.Status = reader[4].ToString();
+                        taskList.Add(taskModel);
+                    }
+                }
+                return taskList;
+            }
         }
     }
 }

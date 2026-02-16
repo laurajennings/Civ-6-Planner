@@ -37,7 +37,8 @@ namespace Civ6Planner.Presenters
 
         private void GetAllTasks()
         {
-            var tasks = _taskRepo.GetAll();
+            Debug.WriteLine($"get tasks: {_game.GameId}");
+            var tasks = _taskRepo.GetByGameId(_game.GameId);
             Debug.WriteLine("tasks");
             foreach (var task in tasks)
             {
