@@ -2,6 +2,7 @@
 using Civ6Planner.Views;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,9 @@ namespace Civ6Planner.Presenters
         private ITaskRepo _taskRepo;
         private GameModel _game;
 
+        private BindingSource _tasksBindingSource;
+        //private BindingList<TaskModel> _tasksBindingList;
+
         public GamePresenter(IGameView view, IGameRepo repo, ICivRepo civRepo, ITaskRepo taskRepo, GameModel game)
         {
             _view = view;
@@ -24,6 +28,8 @@ namespace Civ6Planner.Presenters
             _civRepo = civRepo;
             _taskRepo = taskRepo;
             _game = game;
+
+            _tasksBindingSource = new BindingSource { DataSource = new BindingList<TaskModel>() };
 
             var civ = _civRepo.GetById(game.CivId);
             _view.CivName = civ.Name;
@@ -37,12 +43,15 @@ namespace Civ6Planner.Presenters
 
         private void GetAllTasks()
         {
-            Debug.WriteLine($"get tasks: {_game.GameId}");
             var tasks = _taskRepo.GetByGameId(_game.GameId);
-            Debug.WriteLine("tasks");
+
+            var taskList = _tasksBindingSource.DataSource as BindingList<TaskModel>;
+            taskList.Clear();
             foreach (var task in tasks)
             {
+                taskList.Add(task);
                 Debug.WriteLine(task.Name);
+                Debug.WriteLine(taskList.Count());
             }
         }
     }

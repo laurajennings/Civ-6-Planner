@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Civ6Planner.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Civ6Planner.Views
 {
     public partial class GameView : Form, IGameView
     {
+        //private BindingList<TaskModel> _tasksBindingList;
         public GameView()
         {
             InitializeComponent();
@@ -22,6 +24,10 @@ namespace Civ6Planner.Views
         public string CivAbilities { set { lblCivAbilities.Text = value; } }
         public string Notes { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
+        //public void SetBindingListData(BindingSource taskList)
+        //{
+        //    _tasksBindingList.DataSource = taskList;
+        //}
 
         private static GameView _instance;
         public static GameView GetInstance(Form parentContainer)

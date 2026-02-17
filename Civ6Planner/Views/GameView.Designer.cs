@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
-            lblCivName = new Label();
-            lblCivAbilities = new Label();
             lblCivLeader = new Label();
+            lblCivAbilities = new Label();
+            lblCivName = new Label();
+            groupBox2 = new GroupBox();
+            flowPanelTasks = new FlowLayoutPanel();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(flowPanelTasks);
             groupBox1.Controls.Add(lblCivLeader);
             groupBox1.Controls.Add(lblCivAbilities);
             groupBox1.Controls.Add(lblCivName);
@@ -48,23 +50,14 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Civ Info";
             // 
-            // groupBox2
+            // lblCivLeader
             // 
-            groupBox2.Location = new Point(2, 225);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(200, 227);
-            groupBox2.TabIndex = 1;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Notes";
-            // 
-            // lblCivName
-            // 
-            lblCivName.AutoSize = true;
-            lblCivName.Location = new Point(10, 33);
-            lblCivName.Name = "lblCivName";
-            lblCivName.Size = new Size(38, 15);
-            lblCivName.TabIndex = 0;
-            lblCivName.Text = "label1";
+            lblCivLeader.AutoSize = true;
+            lblCivLeader.Location = new Point(10, 65);
+            lblCivLeader.Name = "lblCivLeader";
+            lblCivLeader.Size = new Size(38, 15);
+            lblCivLeader.TabIndex = 2;
+            lblCivLeader.Text = "label3";
             // 
             // lblCivAbilities
             // 
@@ -75,14 +68,30 @@
             lblCivAbilities.TabIndex = 1;
             lblCivAbilities.Text = "label2";
             // 
-            // lblCivLeader
+            // lblCivName
             // 
-            lblCivLeader.AutoSize = true;
-            lblCivLeader.Location = new Point(10, 65);
-            lblCivLeader.Name = "lblCivLeader";
-            lblCivLeader.Size = new Size(38, 15);
-            lblCivLeader.TabIndex = 2;
-            lblCivLeader.Text = "label3";
+            lblCivName.AutoSize = true;
+            lblCivName.Location = new Point(10, 33);
+            lblCivName.Name = "lblCivName";
+            lblCivName.Size = new Size(38, 15);
+            lblCivName.TabIndex = 0;
+            lblCivName.Text = "label1";
+            // 
+            // groupBox2
+            // 
+            groupBox2.Location = new Point(2, 225);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(200, 227);
+            groupBox2.TabIndex = 1;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Notes";
+            // 
+            // flowPanelTasks
+            // 
+            flowPanelTasks.Location = new Point(195, 0);
+            flowPanelTasks.Name = "flowPanelTasks";
+            flowPanelTasks.Size = new Size(200, 451);
+            flowPanelTasks.TabIndex = 2;
             // 
             // GameView
             // 
@@ -105,5 +114,6 @@
         private Label lblCivAbilities;
         private Label lblCivName;
         private GroupBox groupBox2;
+        private FlowLayoutPanel flowPanelTasks;
     }
 }
