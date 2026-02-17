@@ -62,5 +62,29 @@ namespace Civ6Planner._Repos
             }
             return civModel;
         }
+
+        public IEnumerable<CityModel> GetCitiesByCivId(int civId)
+        {
+            var cityList = new List<CityModel>();
+            using (var connection = new SQLiteConnection(_connectionString))
+            using (var command = new SQLiteCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "SELECT (city_id, name) FROM cities WHERE civ_id = @civ_id";
+                command.Parameters.AddWithValue("@civ_id", civId);
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var cityModel = new CityModel();
+                        cityModel.CityId = Convert.ToInt32(reader[0]);
+                        cityModel.Name = reader[1].ToString();
+                        cityList.Add(cityModel);
+                    }
+                }
+            }
+            return cityList;
+        }
     }
 }
