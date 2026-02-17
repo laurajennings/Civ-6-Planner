@@ -15,6 +15,7 @@ namespace Civ6Planner._Repos
     {
         private readonly string _connectionString;
         private readonly string csvPathCivs = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "civs.csv");
+        private readonly string csvPathCities = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "cities.csv");
 
         public Seed(string connectionString)
         {
@@ -62,7 +63,14 @@ namespace Civ6Planner._Repos
                                         game_id INTEGER,
                                         FOREIGN KEY (game_id) REFERENCES games(game_id) ON DELETE CASCADE)";
                 command.ExecuteNonQuery();
+                command.CommandText = @"CREATE TABLE IF NOT EXISTS cities(
+                                        city_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                        name TEXT,
+                                        civ_id INTEGER,
+                                        FOREIGN KEY (civ_id) REFERENCES civs(civ_id))";
+                command.ExecuteNonQuery();
                 InsertCivs(connection);
+                InsertCities(connection);
             }
         }
 
@@ -83,6 +91,51 @@ namespace Civ6Planner._Repos
                 }
                 transaction.Commit();
             }
+        }
+
+        protected virtual void InsertCities(SQLiteConnection connection)
+        {
+            var cityList = ReadCitiesFromCsv();
+            using (var transaction = connection.BeginTransaction())
+            using (var command = new SQLiteCommand(connection))
+            {
+                command.CommandText = @"INSERT INTO cities (name, civ_id)
+                                        SELECT @name, civ_id FROM civs WHERE name = @civ_name";
+                foreach (var city in cityList)
+                {
+                    command.Parameters.Clear();
+                    command.Parameters.AddWithValue("@name", city.Name);
+                    command.Parameters.AddWithValue("@civ_name", city.CivName);
+                    command.ExecuteNonQuery();
+                }
+                transaction.Commit();
+            }
+
+        }
+
+        private List<CityModel> ReadCitiesFromCsv()
+        {
+            if (!File.Exists(csvPathCities))
+            {
+                throw new FileNotFoundException($"csv not found: {csvPathCities}");
+            }
+            var cityList = new List<CityModel>();
+            var lines = File.ReadAllLines(csvPathCities);
+            for (int i = 1; i < lines.Length; i++)
+            {
+                var line = lines[i];
+                if (string.IsNullOrWhiteSpace(line)) continue;
+                var values = line.Split(',');
+                if (values.Length >= 2)
+                {
+                    cityList.Add(new CityModel
+                    {
+                        Name = values[0].Trim(),
+                        CivName = values[1].Trim()
+                    });
+                }
+            }
+            return cityList;
         }
 
         private List<CivModel> ReadCivsFromCsv()
