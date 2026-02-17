@@ -13,6 +13,9 @@ namespace Civ6Planner.Views
         string CivAbilities { set; }
         string Notes { get; set; }
 
+        event EventHandler TaskListChanged;
+
+        void SetBindingListData(BindingSource taskList);
         void Show();
     }
 }

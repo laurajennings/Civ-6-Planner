@@ -15,9 +15,8 @@ namespace Civ6Planner._Repos
         {
             _connectionString = connectionString;
         }
-        public void Add(GameModel gameModel)
+        public int Add(GameModel gameModel)
         {
-            Debug.WriteLine($"add game: {gameModel.GameId}");
             using (var connection = new SQLiteConnection(_connectionString))
             using (var command = new SQLiteCommand())
             {
@@ -27,6 +26,8 @@ namespace Civ6Planner._Repos
                 command.Parameters.AddWithValue("@name", gameModel.Name);
                 command.Parameters.AddWithValue("@civ_id", gameModel.CivId);
                 command.ExecuteNonQuery();
+                int gameId = (int)connection.LastInsertRowId;
+                return gameId;
             }
         }
 

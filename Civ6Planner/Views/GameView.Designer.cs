@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
-            lblCivName = new Label();
-            lblCivAbilities = new Label();
+            flowPanelTasks = new Civ6Planner.Controls.FlowPanelTasks();
             lblCivLeader = new Label();
+            lblCivAbilities = new Label();
+            lblCivName = new Label();
+            groupBox2 = new GroupBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,32 +49,14 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Civ Info";
             // 
-            // groupBox2
+            // flowPanelTasks
             // 
-            groupBox2.Location = new Point(2, 225);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(200, 227);
-            groupBox2.TabIndex = 1;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Notes";
-            // 
-            // lblCivName
-            // 
-            lblCivName.AutoSize = true;
-            lblCivName.Location = new Point(10, 33);
-            lblCivName.Name = "lblCivName";
-            lblCivName.Size = new Size(38, 15);
-            lblCivName.TabIndex = 0;
-            lblCivName.Text = "label1";
-            // 
-            // lblCivAbilities
-            // 
-            lblCivAbilities.AutoSize = true;
-            lblCivAbilities.Location = new Point(10, 101);
-            lblCivAbilities.Name = "lblCivAbilities";
-            lblCivAbilities.Size = new Size(38, 15);
-            lblCivAbilities.TabIndex = 1;
-            lblCivAbilities.Text = "label2";
+            flowPanelTasks.BindingSource = null;
+            flowPanelTasks.FlowDirection = FlowDirection.TopDown;
+            flowPanelTasks.Location = new Point(199, 1);
+            flowPanelTasks.Name = "flowPanelTasks";
+            flowPanelTasks.Size = new Size(200, 451);
+            flowPanelTasks.TabIndex = 2;
             // 
             // lblCivLeader
             // 
@@ -84,11 +67,39 @@
             lblCivLeader.TabIndex = 2;
             lblCivLeader.Text = "label3";
             // 
+            // lblCivAbilities
+            // 
+            lblCivAbilities.AutoSize = true;
+            lblCivAbilities.Location = new Point(10, 101);
+            lblCivAbilities.Name = "lblCivAbilities";
+            lblCivAbilities.Size = new Size(38, 15);
+            lblCivAbilities.TabIndex = 1;
+            lblCivAbilities.Text = "label2";
+            // 
+            // lblCivName
+            // 
+            lblCivName.AutoSize = true;
+            lblCivName.Location = new Point(10, 33);
+            lblCivName.Name = "lblCivName";
+            lblCivName.Size = new Size(38, 15);
+            lblCivName.TabIndex = 0;
+            lblCivName.Text = "label1";
+            // 
+            // groupBox2
+            // 
+            groupBox2.Location = new Point(2, 225);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(200, 227);
+            groupBox2.TabIndex = 1;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Notes";
+            // 
             // GameView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(flowPanelTasks);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "GameView";
@@ -105,5 +116,6 @@
         private Label lblCivAbilities;
         private Label lblCivName;
         private GroupBox groupBox2;
+        private Controls.FlowPanelTasks flowPanelTasks;
     }
 }

@@ -62,6 +62,7 @@
             // 
             // pnlMessage
             // 
+            pnlMessage.AutoSize = true;
             pnlMessage.BackColor = SystemColors.ControlDark;
             pnlMessage.Controls.Add(lblMessage);
             pnlMessage.Location = new Point(588, 383);
@@ -73,12 +74,16 @@
             // lblMessage
             // 
             lblMessage.AutoSize = true;
+            lblMessage.Dock = DockStyle.Top;
             lblMessage.Font = new Font("Segoe UI", 9F);
-            lblMessage.Location = new Point(18, 22);
+            lblMessage.Location = new Point(0, 0);
+            lblMessage.MaximumSize = new Size(200, 0);
             lblMessage.Name = "lblMessage";
-            lblMessage.Size = new Size(38, 15);
+            lblMessage.Padding = new Padding(5);
+            lblMessage.Size = new Size(47, 31);
             lblMessage.TabIndex = 0;
             lblMessage.Text = "label1";
+            lblMessage.UseCompatibleTextRendering = true;
             // 
             // timerMessage
             // 
