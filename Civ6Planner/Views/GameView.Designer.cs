@@ -29,17 +29,16 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            flowPanelTasks = new Civ6Planner.Controls.FlowPanelTasks();
             lblCivLeader = new Label();
             lblCivAbilities = new Label();
             lblCivName = new Label();
             groupBox2 = new GroupBox();
-            flowPanelTasks = new FlowLayoutPanel();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(flowPanelTasks);
             groupBox1.Controls.Add(lblCivLeader);
             groupBox1.Controls.Add(lblCivAbilities);
             groupBox1.Controls.Add(lblCivName);
@@ -49,6 +48,15 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Civ Info";
+            // 
+            // flowPanelTasks
+            // 
+            flowPanelTasks.BindingSource = null;
+            flowPanelTasks.FlowDirection = FlowDirection.TopDown;
+            flowPanelTasks.Location = new Point(199, 1);
+            flowPanelTasks.Name = "flowPanelTasks";
+            flowPanelTasks.Size = new Size(200, 451);
+            flowPanelTasks.TabIndex = 2;
             // 
             // lblCivLeader
             // 
@@ -86,18 +94,12 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Notes";
             // 
-            // flowPanelTasks
-            // 
-            flowPanelTasks.Location = new Point(195, 0);
-            flowPanelTasks.Name = "flowPanelTasks";
-            flowPanelTasks.Size = new Size(200, 451);
-            flowPanelTasks.TabIndex = 2;
-            // 
             // GameView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(flowPanelTasks);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "GameView";
@@ -114,6 +116,6 @@
         private Label lblCivAbilities;
         private Label lblCivName;
         private GroupBox groupBox2;
-        private FlowLayoutPanel flowPanelTasks;
+        private Controls.FlowPanelTasks flowPanelTasks;
     }
 }

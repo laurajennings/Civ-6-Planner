@@ -53,3 +53,4 @@ C:\Users\laura\Documents\AppDev\Microsoft\Civ6Planner\Civ6Planner\obj\Debug\net8
 C:\Users\laura\Documents\AppDev\Microsoft\Civ6Planner\Civ6Planner\obj\Debug\net8.0-windows\Civ6Plan.25485BC2.Up2Date
 C:\Users\laura\Documents\AppDev\Microsoft\Civ6Planner\Civ6Planner\obj\Debug\net8.0-windows\Civ6Planner.Views.GameView.resources
 C:\Users\laura\Documents\AppDev\Microsoft\Civ6Planner\Civ6Planner\obj\Debug\net8.0-windows\Civ6Planner.Views.LoadGameView.resources
+C:\Users\laura\Documents\AppDev\Microsoft\Civ6Planner\Civ6Planner\obj\Debug\net8.0-windows\Civ6Planner.Controls.TaskCard.resources
