@@ -10,6 +10,7 @@ namespace Civ6Planner.Models
     {
         IEnumerable<CivModel> GetAll();
         CivModel GetById(int civId);
-        IEnumerable<CityModel> GetCitiesByCivId(int civId);
+        List<string> GetCitiesByCivId(int civId);
+        void AddCitiesToGame(int gameId, int civId);
     }
 }

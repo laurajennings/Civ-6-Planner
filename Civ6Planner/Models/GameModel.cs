@@ -12,6 +12,7 @@ namespace Civ6Planner.Models
         private string _name;
         private string _notes;
         private int _civId;
+        private IEnumerable<CityModel> _cities;
         // cities settled
         // tasks
         // focused achievements
@@ -35,6 +36,11 @@ namespace Civ6Planner.Models
         {
             get { return _civId; }
             set { _civId = value; }
+        }
+        public IEnumerable<CityModel> Cities
+        {
+            get { return _cities; }
+            set { _cities = value; }
         }
        
     }

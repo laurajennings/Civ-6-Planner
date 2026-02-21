@@ -51,6 +51,10 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[33.1.0, )"
+            },
             "SourceGear.sqlite3": {
               "target": "Package",
               "version": "[3.50.4.5, )"

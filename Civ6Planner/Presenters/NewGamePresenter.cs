@@ -52,6 +52,7 @@ namespace Civ6Planner.Presenters
             {
                 gameModel.GameId = _repo.Add(gameModel);
                 _taskRepo.AddDefaultTasksToGame(gameModel.GameId);
+                _civRepo.AddCitiesToGame(gameModel.GameId, gameModel.CivId);
                 _view.Message = "Game added successfully";
                 _onGameLoaded?.Invoke(gameModel);
                 ClearFields();

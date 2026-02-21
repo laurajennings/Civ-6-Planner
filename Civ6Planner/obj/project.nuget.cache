@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "j2DAH2yNbHY=",
+  "dgSpecHash": "06jni6zDp3o=",
   "success": true,
   "projectFilePath": "C:\\Users\\laura\\Documents\\AppDev\\Microsoft\\Civ6Planner\\Civ6Planner\\Civ6Planner.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\laura\\.nuget\\packages\\csvhelper\\33.1.0\\csvhelper.33.1.0.nupkg.sha512",
     "C:\\Users\\laura\\.nuget\\packages\\sourcegear.sqlite3\\3.50.4.5\\sourcegear.sqlite3.3.50.4.5.nupkg.sha512",
     "C:\\Users\\laura\\.nuget\\packages\\system.data.sqlite\\2.0.2\\system.data.sqlite.2.0.2.nupkg.sha512"
   ],
