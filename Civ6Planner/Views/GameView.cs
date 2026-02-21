@@ -52,10 +52,15 @@ namespace Civ6Planner.Views
             flowPanel.ResumeLayout();
         }
 
-        public void SetBindingListData(BindingSource taskList)
+        public void SetTasksBindingList(BindingSource taskList)
         {
             flowPanelTasks.BindingSource = taskList;
             ListChangedEvent();
+        }
+
+        public void SetCitiesBindingList(BindingSource cityList)
+        {
+
         }
 
         private static GameView _instance;

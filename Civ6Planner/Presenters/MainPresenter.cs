@@ -28,7 +28,8 @@ namespace Civ6Planner.Presenters
             IGameRepo repo = new GameRepo(_sqlConnectionString);
             ICivRepo civRepo = new CivRepo(_sqlConnectionString);
             ITaskRepo taskRepo = new TaskRepo(_sqlConnectionString);
-            new NewGamePresenter(view, repo, civRepo, taskRepo, OpenGame, ShowMessage);
+            ICityRepo cityRepo = new CityRepo(_sqlConnectionString);
+            new NewGamePresenter(view, repo, civRepo, taskRepo, cityRepo, OpenGame, ShowMessage);
         }
 
         private void OnLoadGameClicked(object sender, EventArgs e)
@@ -44,7 +45,8 @@ namespace Civ6Planner.Presenters
             IGameRepo repo = new GameRepo(_sqlConnectionString);
             ICivRepo civRepo = new CivRepo(_sqlConnectionString);
             ITaskRepo taskRepo = new TaskRepo(_sqlConnectionString);
-            new GamePresenter(view, repo, civRepo, taskRepo, game);
+            ICityRepo cityRepo = new CityRepo(_sqlConnectionString);
+            new GamePresenter(view, repo, civRepo, taskRepo, cityRepo, game);
         }
 
         private void ShowMessage(string message) 
