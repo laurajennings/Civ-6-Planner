@@ -6,19 +6,13 @@ using System.Threading.Tasks;
 
 namespace Civ6Planner.Models
 {
-    public class CivModel
+    public class CivCsvModel
     {
-        private int _civId;
         private string _name;
         private string _leader;
         private string _abilities;
-        private List<string> _cities;
+        private string _cities;
 
-        public int CivId
-        {
-            get { return _civId; }
-            set { _civId = value; }
-        }
         public string Name
         {
             get { return _name; }
@@ -35,7 +29,7 @@ namespace Civ6Planner.Models
             set { _abilities = value; }
         }
 
-        public List<string> Cities
+        public string Cities
         {
             get { return _cities; }
             set { _cities = value; }
