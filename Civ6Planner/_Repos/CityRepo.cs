@@ -70,12 +70,13 @@ namespace Civ6Planner._Repos
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO cities (name, civ_id, game_id) VALUES (@name, @civ_id, @game_id)";
+                command.CommandText = "INSERT INTO cities (name, settled, civ_id, game_id) VALUES (@name, @settled, @civ_id, @game_id)";
                 foreach (var city in cityList)
                 {
                     Debug.WriteLine($"CITIES, {city} game id {gameId} civ id {civId}");
                     command.Parameters.Clear();
                     command.Parameters.AddWithValue("@name", city);
+                    command.Parameters.AddWithValue("@settled", false);
                     command.Parameters.AddWithValue("@civ_id", civId);
                     command.Parameters.AddWithValue("@game_id", gameId);
                     command.ExecuteNonQuery();

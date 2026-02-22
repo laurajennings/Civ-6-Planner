@@ -29,6 +29,14 @@ namespace Civ6Planner.Views
             };
         }
 
+        private void CitiesEvents()
+        {
+            tlpCities.BindingSource.ListChanged += (s, e) =>
+            {
+                OnCityListChanged(tlpCities, tlpCities.BindingSource);
+            };
+        }
+
         public string CivName { set { lblCivName.Text = value; } }
         public string CivLeader { set { lblCivLeader.Text = value; } }
         public string CivAbilities { set { lblCivAbilities.Text = value; } }
@@ -52,6 +60,42 @@ namespace Civ6Planner.Views
             flowPanel.ResumeLayout();
         }
 
+        private void OnCityListChanged(TableLayoutPanel tlpCities, BindingSource bindingSource)
+        {
+            tlpCities.SuspendLayout();
+            tlpCities.Controls.Clear();
+            
+            var cities = bindingSource.DataSource as BindingList<CityModel>;
+            foreach (var city in cities)
+            {
+                if (city.Settled == true)
+                {
+                    var panel = new PnlCity(city);
+                }
+            }
+            var settleButton = new BtnSettle();
+            tlpCities.Controls.Add(settleButton);
+            settleButton.Click += delegate
+            {
+                OnSettleClicked();
+            };
+        }
+
+        public void OnSettleClicked()
+        {
+            var cities = tlpCities.BindingSource.DataSource as BindingList<CityModel>;
+            foreach (var city in cities)
+            {
+                if (!city.Settled)
+                {
+                    city.Settled = true;
+                    Debug.WriteLine($"city settled {city.Name}");
+                    break;
+                }
+            }
+            
+        }
+
         public void SetTasksBindingList(BindingSource taskList)
         {
             flowPanelTasks.BindingSource = taskList;
@@ -60,7 +104,8 @@ namespace Civ6Planner.Views
 
         public void SetCitiesBindingList(BindingSource cityList)
         {
-
+            tlpCities.BindingSource = cityList;
+            CitiesEvents();
         }
 
         private static GameView _instance;

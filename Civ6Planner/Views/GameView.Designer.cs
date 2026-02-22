@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            flowPanelTasks = new Civ6Planner.Controls.FlowPanelTasks();
             lblCivLeader = new Label();
             lblCivAbilities = new Label();
             lblCivName = new Label();
+            flowPanelTasks = new Civ6Planner.Controls.FlowPanelTasks();
             groupBox2 = new GroupBox();
+            tlpCities = new Civ6Planner.Controls.TlpCities();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,15 +49,6 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Civ Info";
-            // 
-            // flowPanelTasks
-            // 
-            flowPanelTasks.BindingSource = null;
-            flowPanelTasks.FlowDirection = FlowDirection.TopDown;
-            flowPanelTasks.Location = new Point(199, 1);
-            flowPanelTasks.Name = "flowPanelTasks";
-            flowPanelTasks.Size = new Size(200, 451);
-            flowPanelTasks.TabIndex = 2;
             // 
             // lblCivLeader
             // 
@@ -85,6 +77,15 @@
             lblCivName.TabIndex = 0;
             lblCivName.Text = "label1";
             // 
+            // flowPanelTasks
+            // 
+            flowPanelTasks.BindingSource = null;
+            flowPanelTasks.FlowDirection = FlowDirection.TopDown;
+            flowPanelTasks.Location = new Point(199, 1);
+            flowPanelTasks.Name = "flowPanelTasks";
+            flowPanelTasks.Size = new Size(200, 451);
+            flowPanelTasks.TabIndex = 2;
+            // 
             // groupBox2
             // 
             groupBox2.Location = new Point(2, 225);
@@ -94,11 +95,27 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Notes";
             // 
+            // tlpCities
+            // 
+            tlpCities.BackColor = SystemColors.ActiveCaption;
+            tlpCities.BindingSource = null;
+            tlpCities.ColumnCount = 2;
+            tlpCities.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tlpCities.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tlpCities.Location = new Point(419, 12);
+            tlpCities.Name = "tlpCities";
+            tlpCities.RowCount = 2;
+            tlpCities.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tlpCities.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tlpCities.Size = new Size(609, 439);
+            tlpCities.TabIndex = 3;
+            // 
             // GameView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1051, 463);
+            Controls.Add(tlpCities);
             Controls.Add(flowPanelTasks);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -117,5 +134,6 @@
         private Label lblCivName;
         private GroupBox groupBox2;
         private Controls.FlowPanelTasks flowPanelTasks;
+        private Controls.TlpCities tlpCities;
     }
 }

@@ -68,7 +68,9 @@ namespace Civ6Planner.Presenters
             foreach (var city in cities)
             {
                 cityList.Add(city);
+                Debug.WriteLine($"city list {cityList.Count} city {city.Name}");
             }
+            Debug.WriteLine($"binding source {_citiesBindingSource.Count}");
         }
     }
 }

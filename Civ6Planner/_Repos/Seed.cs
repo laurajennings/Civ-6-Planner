@@ -69,6 +69,7 @@ namespace Civ6Planner._Repos
                 command.CommandText = @"CREATE TABLE IF NOT EXISTS cities(
                                         city_id INTEGER PRIMARY KEY AUTOINCREMENT,
                                         name TEXT,
+                                        settled INTEGER,
                                         civ_id INTEGER,
                                         game_id INTEGER,
                                         FOREIGN KEY (civ_id) REFERENCES civs(civ_id),
