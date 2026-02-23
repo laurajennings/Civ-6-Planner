@@ -4,11 +4,14 @@
     <Compile Update="Controls\BtnSettle.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="Controls\FlowPanelCities.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="Controls\FlowPanelTasks.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Update="Controls\PnlCity.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Update="Controls\TaskCard.cs">
       <SubType>UserControl</SubType>

@@ -34,7 +34,7 @@
             lblCivName = new Label();
             flowPanelTasks = new Civ6Planner.Controls.FlowPanelTasks();
             groupBox2 = new GroupBox();
-            tlpCities = new Civ6Planner.Controls.TlpCities();
+            flowPanelCities = new Civ6Planner.Controls.FlowPanelCities();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -95,27 +95,21 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Notes";
             // 
-            // tlpCities
+            // flowPanelCities
             // 
-            tlpCities.BackColor = SystemColors.ActiveCaption;
-            tlpCities.BindingSource = null;
-            tlpCities.ColumnCount = 2;
-            tlpCities.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tlpCities.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tlpCities.Location = new Point(419, 12);
-            tlpCities.Name = "tlpCities";
-            tlpCities.RowCount = 2;
-            tlpCities.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tlpCities.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tlpCities.Size = new Size(609, 439);
-            tlpCities.TabIndex = 3;
+            flowPanelCities.BindingSource = null;
+            flowPanelCities.Dock = DockStyle.Right;
+            flowPanelCities.Location = new Point(405, 0);
+            flowPanelCities.Name = "flowPanelCities";
+            flowPanelCities.Size = new Size(646, 463);
+            flowPanelCities.TabIndex = 3;
             // 
             // GameView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1051, 463);
-            Controls.Add(tlpCities);
+            Controls.Add(flowPanelCities);
             Controls.Add(flowPanelTasks);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -134,6 +128,6 @@
         private Label lblCivName;
         private GroupBox groupBox2;
         private Controls.FlowPanelTasks flowPanelTasks;
-        private Controls.TlpCities tlpCities;
+        private Controls.FlowPanelCities flowPanelCities;
     }
 }

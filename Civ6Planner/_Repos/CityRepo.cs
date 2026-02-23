@@ -73,7 +73,6 @@ namespace Civ6Planner._Repos
                 command.CommandText = "INSERT INTO cities (name, settled, civ_id, game_id) VALUES (@name, @settled, @civ_id, @game_id)";
                 foreach (var city in cityList)
                 {
-                    Debug.WriteLine($"CITIES, {city} game id {gameId} civ id {civId}");
                     command.Parameters.Clear();
                     command.Parameters.AddWithValue("@name", city);
                     command.Parameters.AddWithValue("@settled", false);

@@ -31,9 +31,9 @@ namespace Civ6Planner.Views
 
         private void CitiesEvents()
         {
-            tlpCities.BindingSource.ListChanged += (s, e) =>
+            flowPanelCities.BindingSource.ListChanged += (s, e) =>
             {
-                OnCityListChanged(tlpCities, tlpCities.BindingSource);
+                OnCityListChanged(flowPanelCities, flowPanelCities.BindingSource);
             };
         }
 
@@ -60,10 +60,10 @@ namespace Civ6Planner.Views
             flowPanel.ResumeLayout();
         }
 
-        private void OnCityListChanged(TableLayoutPanel tlpCities, BindingSource bindingSource)
+        private void OnCityListChanged(FlowLayoutPanel flowPanelCities, BindingSource bindingSource)
         {
-            tlpCities.SuspendLayout();
-            tlpCities.Controls.Clear();
+            flowPanelCities.SuspendLayout();
+            flowPanelCities.Controls.Clear();
             
             var cities = bindingSource.DataSource as BindingList<CityModel>;
             foreach (var city in cities)
@@ -71,29 +71,32 @@ namespace Civ6Planner.Views
                 if (city.Settled == true)
                 {
                     var panel = new PnlCity(city);
+                    flowPanelCities.Controls.Add(panel);
                 }
             }
-            var settleButton = new BtnSettle();
-            tlpCities.Controls.Add(settleButton);
-            settleButton.Click += delegate
+            var btnSettle = new BtnSettle();
+            flowPanelCities.Controls.Add(btnSettle);
+            btnSettle.Click += delegate
             {
-                OnSettleClicked();
+                OnSettleClicked(btnSettle);
             };
+            flowPanelCities.ResumeLayout();
         }
 
-        public void OnSettleClicked()
+        public void OnSettleClicked(BtnSettle btnSettle)
         {
-            var cities = tlpCities.BindingSource.DataSource as BindingList<CityModel>;
+            var cities = flowPanelCities.BindingSource.DataSource as BindingList<CityModel>;
+            
             foreach (var city in cities)
             {
                 if (!city.Settled)
                 {
                     city.Settled = true;
-                    Debug.WriteLine($"city settled {city.Name}");
+                    OnCityListChanged(flowPanelCities, flowPanelCities.BindingSource);
                     break;
                 }
             }
-            
+
         }
 
         public void SetTasksBindingList(BindingSource taskList)
@@ -104,7 +107,7 @@ namespace Civ6Planner.Views
 
         public void SetCitiesBindingList(BindingSource cityList)
         {
-            tlpCities.BindingSource = cityList;
+            flowPanelCities.BindingSource = cityList;
             CitiesEvents();
         }
 
