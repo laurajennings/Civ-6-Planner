@@ -11,7 +11,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Update="Controls\PnlCity.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Controls\TaskCard.cs">
       <SubType>UserControl</SubType>

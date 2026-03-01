@@ -43,6 +43,7 @@ namespace Civ6Planner.Views
         public string Notes { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public event EventHandler TaskListChanged;
+        public event EventHandler SettleClicked;
 
         private void OnTaskListChanged(FlowLayoutPanel flowPanel, BindingSource bindingSource)
         {
@@ -78,26 +79,26 @@ namespace Civ6Planner.Views
             flowPanelCities.Controls.Add(btnSettle);
             btnSettle.Click += delegate
             {
-                OnSettleClicked(btnSettle);
+                SettleClicked?.Invoke(this, EventArgs.Empty);
             };
             flowPanelCities.ResumeLayout();
         }
 
-        public void OnSettleClicked(BtnSettle btnSettle)
-        {
-            var cities = flowPanelCities.BindingSource.DataSource as BindingList<CityModel>;
-            
-            foreach (var city in cities)
-            {
-                if (!city.Settled)
-                {
-                    city.Settled = true;
-                    OnCityListChanged(flowPanelCities, flowPanelCities.BindingSource);
-                    break;
-                }
-            }
+        //public void OnSettleClicked(BtnSettle btnSettle)
+        //{
+        //    var cities = flowPanelCities.BindingSource.DataSource as BindingList<CityModel>;
 
-        }
+        //    foreach (var city in cities)
+        //    {
+        //        if (!city.Settled)
+        //        {
+        //            city.Settled = true;
+        //            OnCityListChanged(flowPanelCities, flowPanelCities.BindingSource);
+        //            break;
+        //        }
+        //    }
+
+        //}
 
         public void SetTasksBindingList(BindingSource taskList)
         {

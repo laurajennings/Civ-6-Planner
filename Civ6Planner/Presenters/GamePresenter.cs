@@ -32,6 +32,8 @@ namespace Civ6Planner.Presenters
             _cityRepo = cityRepo;
             _game = game;
 
+            _view.SettleClicked += OnSettleClicked;
+
             var civ = _civRepo.GetById(game.CivId);
             _view.CivName = civ.Name;
             _view.CivLeader = civ.Leader;
@@ -68,6 +70,22 @@ namespace Civ6Planner.Presenters
             foreach (var city in cities)
             {
                 cityList.Add(city);
+            }
+        }
+
+        private void OnSettleClicked()
+        {
+            var cities = _citiesBindingSource.DataSource as BindingList<CityModel>;
+
+            foreach (var city in cities)
+            {
+                if (!city.Settled)
+                {
+                    city.Settled = true;
+                    _cityRepo.Edit(city);
+                    GetCities();
+                    break;
+                }
             }
         }
     }

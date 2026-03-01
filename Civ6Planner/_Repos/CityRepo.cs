@@ -82,5 +82,19 @@ namespace Civ6Planner._Repos
                 }
             }
         }
+
+        public void Edit(CityModel city)
+        {
+            using (var connection = new SQLiteConnection(_connectionString))
+            using (var command = new SQLiteCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = @"UPDATE cities SET settled = @settled WHERE city_id = @city_id";
+                command.Parameters.AddWithValue("@city_id", city.CityId);
+                command.Parameters.AddWithValue("@settled", city.Settled);
+                command.ExecuteNonQuery();
+            }
+        }
     }
 }
