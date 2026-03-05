@@ -15,8 +15,9 @@ namespace Civ6Planner.Views
 
         event EventHandler TaskListChanged;
         event EventHandler SettleClicked;
+        event EventHandler CityListChanged;
 
-        void SetTasksBindingList(BindingSource taskList);
+        //void SetTasksBindingList(BindingSource taskList);
         void SetCitiesBindingList(BindingSource cityList);
         void Show();
     }

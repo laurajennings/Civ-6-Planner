@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,7 @@ namespace Civ6Planner.Controls
         public PnlCity(CityModel city)
         {
             InitializeComponent();
+            Debug.WriteLine($"NEW panel city");
             _city = city;
             lblName.Text = _city.Name;
 

@@ -18,23 +18,6 @@ namespace Civ6Planner.Views
         public GameView()
         {
             InitializeComponent();
-
-        }
-
-        private void ListChangedEvent()
-        {
-            flowPanelTasks.BindingSource.ListChanged += (s, e) =>
-            {
-                OnTaskListChanged(flowPanelTasks, flowPanelTasks.BindingSource);
-            };
-        }
-
-        private void CitiesEvents()
-        {
-            flowPanelCities.BindingSource.ListChanged += (s, e) =>
-            {
-                OnCityListChanged(flowPanelCities, flowPanelCities.BindingSource);
-            };
         }
 
         public string CivName { set { lblCivName.Text = value; } }
@@ -44,6 +27,7 @@ namespace Civ6Planner.Views
 
         public event EventHandler TaskListChanged;
         public event EventHandler SettleClicked;
+        public event EventHandler CityListChanged;
 
         private void OnTaskListChanged(FlowLayoutPanel flowPanel, BindingSource bindingSource)
         {
@@ -61,55 +45,40 @@ namespace Civ6Planner.Views
             flowPanel.ResumeLayout();
         }
 
-        private void OnCityListChanged(FlowLayoutPanel flowPanelCities, BindingSource bindingSource)
+        private void LoadCityPanels(object sender, ListChangedEventArgs e)
         {
-            flowPanelCities.SuspendLayout();
-            flowPanelCities.Controls.Clear();
+            pnlCities.SuspendLayout();
+            pnlCities.Controls.Clear();
             
-            var cities = bindingSource.DataSource as BindingList<CityModel>;
+            var cities = pnlCities.BindingSource.DataSource as BindingList<CityModel>;
             foreach (var city in cities)
             {
                 if (city.Settled == true)
                 {
                     var panel = new PnlCity(city);
-                    flowPanelCities.Controls.Add(panel);
+                    pnlCities.Controls.Add(panel);
                 }
             }
             var btnSettle = new BtnSettle();
-            flowPanelCities.Controls.Add(btnSettle);
+            pnlCities.Controls.Add(btnSettle);
             btnSettle.Click += delegate
             {
                 SettleClicked?.Invoke(this, EventArgs.Empty);
             };
-            flowPanelCities.ResumeLayout();
+            pnlCities.ResumeLayout();
         }
 
-        //public void OnSettleClicked(BtnSettle btnSettle)
+
+
+        //public void SetTasksBindingList(BindingSource taskList)
         //{
-        //    var cities = flowPanelCities.BindingSource.DataSource as BindingList<CityModel>;
-
-        //    foreach (var city in cities)
-        //    {
-        //        if (!city.Settled)
-        //        {
-        //            city.Settled = true;
-        //            OnCityListChanged(flowPanelCities, flowPanelCities.BindingSource);
-        //            break;
-        //        }
-        //    }
-
+            
         //}
-
-        public void SetTasksBindingList(BindingSource taskList)
-        {
-            flowPanelTasks.BindingSource = taskList;
-            ListChangedEvent();
-        }
 
         public void SetCitiesBindingList(BindingSource cityList)
         {
-            flowPanelCities.BindingSource = cityList;
-            CitiesEvents();
+            pnlCities.BindingSource = cityList;
+            pnlCities.BindingSource.ListChanged += LoadCityPanels;
         }
 
         private static GameView _instance;

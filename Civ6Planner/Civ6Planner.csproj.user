@@ -4,20 +4,17 @@
     <Compile Update="Controls\BtnSettle.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Update="Controls\FlowPanelCities.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Update="Controls\FlowPanelTasks.cs">
+    <Compile Update="Controls\PnlCities.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Update="Controls\PnlCity.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Controls\PnlMainTasks.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="Controls\TaskCard.cs">
       <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Controls\TlpCities.cs">
-      <SubType>Component</SubType>
     </Compile>
     <Compile Update="Views\GameView.cs">
       <SubType>Form</SubType>

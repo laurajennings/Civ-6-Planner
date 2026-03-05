@@ -44,7 +44,7 @@ namespace Civ6Planner.Presenters
             GetCities();
 
             _tasksBindingSource = new BindingSource { DataSource = new BindingList<TaskModel>() };
-            _view.SetTasksBindingList(_tasksBindingSource);
+            //_view.SetTasksBindingList(_tasksBindingSource);
             GetAllTasks();
 
             _view.Show();
@@ -69,18 +69,20 @@ namespace Civ6Planner.Presenters
             cityList.Clear();
             foreach (var city in cities)
             {
+                Debug.WriteLine($"GET CITIES CITY {city.Name} {cityList.Count}");
                 cityList.Add(city);
             }
+            Debug.WriteLine($"GET CITIES {cityList.Count}");
         }
 
-        private void OnSettleClicked()
+        private void OnSettleClicked(object sender, EventArgs e)
         {
             var cities = _citiesBindingSource.DataSource as BindingList<CityModel>;
-
             foreach (var city in cities)
             {
                 if (!city.Settled)
                 {
+                    Debug.WriteLine($"settle clicked {city.Name}");
                     city.Settled = true;
                     _cityRepo.Edit(city);
                     GetCities();

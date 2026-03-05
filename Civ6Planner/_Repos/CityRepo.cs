@@ -33,7 +33,8 @@ namespace Civ6Planner._Repos
                     var city = new CityModel();
                     city.CityId = Convert.ToInt32(reader[0]);
                     city.Name = reader[1].ToString();
-                    city.CivId = Convert.ToInt32(reader[2]);
+                    city.Settled = Convert.ToBoolean(reader[2]);
+                    city.CivId = Convert.ToInt32(reader[3]);
                     cityList.Add(city);
                 }
             }
@@ -64,7 +65,6 @@ namespace Civ6Planner._Repos
         public void AddCitiesToGame(int gameId, int civId)
         {
             var cityList = GetCitiesByCivId(civId);
-            Debug.WriteLine($"CITY LIST {cityList}");
             using (var connection = new SQLiteConnection(_connectionString))
             using (var command = new SQLiteCommand())
             {
@@ -85,6 +85,7 @@ namespace Civ6Planner._Repos
 
         public void Edit(CityModel city)
         {
+            Debug.WriteLine($"EDIT CITY {city.CityId} SETTLED {city.Settled}");
             using (var connection = new SQLiteConnection(_connectionString))
             using (var command = new SQLiteCommand())
             {
