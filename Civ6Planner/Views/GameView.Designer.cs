@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            flowPanelTasks = new Civ6Planner.Controls.FlowPanelTasks();
             lblCivLeader = new Label();
             lblCivAbilities = new Label();
             lblCivName = new Label();
             groupBox2 = new GroupBox();
+            pnlMainTasks = new Civ6Planner.Controls.PnlMainTasks();
+            pnlCities = new Civ6Planner.Controls.PnlCities();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,15 +49,6 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Civ Info";
-            // 
-            // flowPanelTasks
-            // 
-            flowPanelTasks.BindingSource = null;
-            flowPanelTasks.FlowDirection = FlowDirection.TopDown;
-            flowPanelTasks.Location = new Point(199, 1);
-            flowPanelTasks.Name = "flowPanelTasks";
-            flowPanelTasks.Size = new Size(200, 451);
-            flowPanelTasks.TabIndex = 2;
             // 
             // lblCivLeader
             // 
@@ -94,12 +86,31 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Notes";
             // 
+            // pnlMainTasks
+            // 
+            pnlMainTasks.BindingSource = null;
+            pnlMainTasks.BorderStyle = BorderStyle.FixedSingle;
+            pnlMainTasks.Location = new Point(208, 12);
+            pnlMainTasks.Name = "pnlMainTasks";
+            pnlMainTasks.Size = new Size(200, 440);
+            pnlMainTasks.TabIndex = 2;
+            // 
+            // pnlCities
+            // 
+            pnlCities.BindingSource = null;
+            pnlCities.BorderStyle = BorderStyle.FixedSingle;
+            pnlCities.Location = new Point(414, 12);
+            pnlCities.Name = "pnlCities";
+            pnlCities.Size = new Size(625, 440);
+            pnlCities.TabIndex = 3;
+            // 
             // GameView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(flowPanelTasks);
+            ClientSize = new Size(1051, 463);
+            Controls.Add(pnlCities);
+            Controls.Add(pnlMainTasks);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "GameView";
@@ -116,6 +127,7 @@
         private Label lblCivAbilities;
         private Label lblCivName;
         private GroupBox groupBox2;
-        private Controls.FlowPanelTasks flowPanelTasks;
+        private Controls.PnlMainTasks pnlMainTasks;
+        private Controls.PnlCities pnlCities;
     }
 }

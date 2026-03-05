@@ -13,10 +13,12 @@ namespace Civ6Planner.Controls
 {
     public partial class TaskCard : UserControl
     {
+        public TaskModel Task;
         public TaskCard(TaskModel task)
         {
             InitializeComponent();
-            lblName.Text = task.Name;
+            this.Task = task;
+            lblName.Text = Task.Name;
         }
     }
 }

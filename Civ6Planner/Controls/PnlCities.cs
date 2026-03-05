@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Civ6Planner.Controls
 {
-    public class FlowPanelTasks : FlowLayoutPanel
+    public class PnlCities : FlowLayoutPanel
     {
-        private BindingSource _bindingSource;
         public BindingSource BindingSource { get; set; }
     }
 }

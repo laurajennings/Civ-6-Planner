@@ -18,15 +18,6 @@ namespace Civ6Planner.Views
         public GameView()
         {
             InitializeComponent();
-
-        }
-
-        private void ListChangedEvent()
-        {
-            flowPanelTasks.BindingSource.ListChanged += (s, e) =>
-            {
-                OnTaskListChanged(flowPanelTasks, flowPanelTasks.BindingSource);
-            };
         }
 
         public string CivName { set { lblCivName.Text = value; } }
@@ -35,6 +26,8 @@ namespace Civ6Planner.Views
         public string Notes { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public event EventHandler TaskListChanged;
+        public event EventHandler SettleClicked;
+        public event EventHandler CityListChanged;
 
         private void OnTaskListChanged(FlowLayoutPanel flowPanel, BindingSource bindingSource)
         {
@@ -52,10 +45,40 @@ namespace Civ6Planner.Views
             flowPanel.ResumeLayout();
         }
 
-        public void SetBindingListData(BindingSource taskList)
+        private void LoadCityPanels(object sender, ListChangedEventArgs e)
         {
-            flowPanelTasks.BindingSource = taskList;
-            ListChangedEvent();
+            pnlCities.SuspendLayout();
+            pnlCities.Controls.Clear();
+            
+            var cities = pnlCities.BindingSource.DataSource as BindingList<CityModel>;
+            foreach (var city in cities)
+            {
+                if (city.Settled == true)
+                {
+                    var panel = new PnlCity(city);
+                    pnlCities.Controls.Add(panel);
+                }
+            }
+            var btnSettle = new BtnSettle();
+            pnlCities.Controls.Add(btnSettle);
+            btnSettle.Click += delegate
+            {
+                SettleClicked?.Invoke(this, EventArgs.Empty);
+            };
+            pnlCities.ResumeLayout();
+        }
+
+
+
+        //public void SetTasksBindingList(BindingSource taskList)
+        //{
+            
+        //}
+
+        public void SetCitiesBindingList(BindingSource cityList)
+        {
+            pnlCities.BindingSource = cityList;
+            pnlCities.BindingSource.ListChanged += LoadCityPanels;
         }
 
         private static GameView _instance;
